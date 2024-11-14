@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Hien Paint</string>
+    <string name="black">Color: Black</string>
+    <string name="red">Color: Red</string>
+    <string name="green">Color: Green</string>
+    <string name="blue">Color: Blue</string>
+    <string name="purple">Color: Purple</string>
+    <string name="white">Color: White</string>
+    <string name="brush">Tool: Brush</string>
+    <string name="gallery">Tool: Gallery</string>
+    <string name="undo">Tool: Undo</string>
+    <string name="save">Tool: Save</string>
+    <string name="background">Background</string>
+    <string name="small">Small width</string>
+    <string name="medium">Medium width</string>
+    <string name="large">Large width</string>
+</resources>

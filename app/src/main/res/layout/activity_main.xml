@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/drawing_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pallet_ll">
+
+        <ImageView
+            android:id="@+id/background_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/background"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/frog_fountain"/>
+
+        <edu.tcu.hienminhdau.paint.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tint"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/pallet_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/drawing_fl"
+        app:layout_constraintBottom_toTopOf="@id/op_ll">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/path_color_selected"
+            android:contentDescription="@string/black"
+            android:background="@color/black"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/path_color_normal"
+            android:contentDescription="@string/red"
+            android:background="@color/red"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/path_color_normal"
+            android:contentDescription="@string/green"
+            android:background="@color/green"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/path_color_normal"
+            android:contentDescription="@string/blue"
+            android:background="@color/blue"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/path_color_normal"
+            android:contentDescription="@string/purple"
+            android:background="@color/tcu_purple"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/path_color_normal"
+            android:contentDescription="@string/white"
+            android:background="@color/off_white"
+            tools:ignore="ImageContrastCheck"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/op_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/pallet_ll"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/brush_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:contentDescription="@string/brush"
+            android:src="@drawable/ic_brush"
+            android:background="@color/light_gray"
+            android:scaleType="centerInside"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:id="@+id/gallery_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:contentDescription="@string/gallery"
+            android:src="@drawable/ic_gallery"
+            android:background="@color/light_gray"
+            android:scaleType="centerCrop"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:id="@+id/undo_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:contentDescription="@string/undo"
+            android:src="@drawable/ic_undo"
+            android:background="@color/light_gray"
+            android:scaleType="centerInside"
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <ImageView
+            android:id="@+id/save_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:contentDescription="@string/save"
+            android:src="@drawable/ic_save"
+            android:background="@color/light_gray"
+            android:scaleType="centerInside"
+            tools:ignore="ImageContrastCheck"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
